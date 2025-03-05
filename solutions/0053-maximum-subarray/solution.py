@@ -1,11 +1,24 @@
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
-        current_sum=nums[0]
-        max_sum=nums[0]
+        # kadan's algorithm
+        currentSum= 0
+        maxSum= float('-inf')
+        for num in nums:
+            currentSum += num
+            maxSum= max(maxSum, currentSum)
+            if currentSum < 0:
+                currentSum = 0
 
-        for i in range(1, len(nums)):
-            current_sum= max(nums[i], current_sum+nums[i])
-            max_sum= max(max_sum, current_sum)
+        return maxSum
+            
 
-        return max_sum
+# Brute force apporach which will give time limit exceeded error
+        # maxSum= float('-inf')
+        # for start in range(len(nums)):
+        #     currentSum=0
+        #     for end in range(start, len(nums)):
+        #         currentSum += nums[end]
+        #         maxSum = max(currentSum, maxSum)
+        # return maxSum
+        
 
