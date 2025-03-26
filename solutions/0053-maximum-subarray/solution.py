@@ -2,13 +2,13 @@ class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
         # kadan's algorithm
         currentSum= 0
-        maxSum= float('-inf')
+        maxSum= float("-inf")
         for num in nums:
             currentSum += num
             maxSum= max(maxSum, currentSum)
             if currentSum < 0:
                 currentSum = 0
-
+            
         return maxSum
             
 
