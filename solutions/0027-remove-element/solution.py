@@ -3,7 +3,7 @@ class Solution:
         left=0
         for right in range(0, len(nums)):
             if nums[right]!= val:
-                
+              
                 nums[left]=nums[right]
                 left+=1
                 
