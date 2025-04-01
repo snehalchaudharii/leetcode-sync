@@ -4,12 +4,13 @@ class Solution:
         sum=0
         for i in range(len(s)-1):
             if dictval[s[i]]< dictval[s[i+1]]:
+    # If its value is less than the next character’s value, subtract it (handles cases like "IV").
                 sum -= dictval[s[i]]
             else:
                 sum +=dictval[s[i]]
 
-        if dictval[s[-1]]:
-            sum +=dictval[s[-1]]
+        # After the loop, add the last character’s value separately
+        sum += dictval[s[-1]]
         
         return sum
         
