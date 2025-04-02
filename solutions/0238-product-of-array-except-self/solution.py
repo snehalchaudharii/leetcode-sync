@@ -10,7 +10,7 @@ class Solution:
         #     ans.append(prod)
         # return ans
 
-        # Optimized method by calculating prefix and sufficx before hand
+        # Optimized method by calculating prefix and sufficx before hand TC & SC O(n)
         # n= len(nums)
         # ans= [1]*n
         # # to calculate prefix
