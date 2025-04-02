@@ -14,7 +14,8 @@ class Solution:
             if s[i]== " ":
                 self.reverse(s, start, i-1)
                 start= i+1
-            
+                
+        # to reverse last word
         self.reverse(s, start, len(s)-1)
 
         result= "".join(s).strip()
