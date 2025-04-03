@@ -44,4 +44,3 @@ class Solution:
             right += 1  # Move right pointer forward
         
         return min_window
-
