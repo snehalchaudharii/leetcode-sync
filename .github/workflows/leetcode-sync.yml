@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Sync LeetCode Submissions
-        uses: joshcai/leetcode-sync@v1.7
+        uses: aymanbaghagha/leetcodesync@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           leetcode-csrf-token: ${{ secrets.LEETCODE_CSRF_TOKEN }}
