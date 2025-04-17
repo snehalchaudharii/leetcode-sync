@@ -2,7 +2,6 @@ class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         # return sorted(s)== sorted(t) TC- NlogN
 
-
 # TC == O(n)
         if len(s)!= len(t):
             return False
