@@ -6,4 +6,4 @@ class Solution:
         
         gcd_length= gcd(len(str1), len(str2))
 
-        return str1[:gcd_length]
+        return str2[:gcd_length]
