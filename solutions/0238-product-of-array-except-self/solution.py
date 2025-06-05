@@ -29,19 +29,20 @@ class Solution:
         # return ans
 
         # To save the space
-        n= len(nums)
-        ans= [1]*n
-        # to calculate prefix
+        res= [1] * len(nums)
+
         prefix=1
-        for i in range(1,n):
-            ans[i]= ans[i-1]*nums[i-1]
-        # to calculate suffix
-        suffix=1
-        for i in range(n-2, -1, -1):
-            suffix *= nums[i+1]
-            ans[i] *= suffix
+
+        for i in range(len(nums)):
+            res[i] = prefix
+            prefix *= nums[i]
         
-        return ans
-           
+        postfix= 1
+
+        for i in range(len(nums)-1, -1, -1):
+            res[i] *= postfix
+            postfix *= nums[i]
+        
+        return res
 
         
