@@ -6,4 +6,4 @@ class Solution:
         else:
             nums.remove(max(nums))
             nums.remove(max(nums))
-            return max(nums)
+        return max(nums)
